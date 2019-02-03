@@ -2,6 +2,8 @@
 
 (use-package helm
   :ensure t
+  :init
+  (setq helm-mode-fuzzy-match t)
   :config
 
   (use-package helm-git-grep
@@ -11,6 +13,9 @@
     ("C-x C-f" . 'helm-find-files)
     ("C-x f" . 'helm-recentf)
     ("M-x" . helm-M-x))
+
+  (use-package helm-projectile
+    :ensure t)
   )
 
 (provide 'owi-helm)

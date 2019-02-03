@@ -8,7 +8,7 @@
 
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-normal-state-map (kbd "C-c C-u") 'universal-argument)
-  (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
+  (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile-find-file)
 
   (evil-set-initial-state 'term-mode 'emacs)
   (evil-set-initial-state 'interactive-haskell-mode 'emacs)
