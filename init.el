@@ -1,0 +1,12 @@
+(add-to-list 'load-path "~/.emacs.d/lib")
+
+(require 'owi-package-management)
+(require 'owi-basics)
+(require 'owi-theming)
+(require 'owi-editing)
+(require 'owi-evil)
+(require 'owi-git)
+(require 'owi-flycheck)
+(require 'owi-haskell)
+(require 'owi-lisp)
+(require 'owi-org)
