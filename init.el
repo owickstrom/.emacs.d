@@ -9,6 +9,8 @@
 (require 'owi-git)
 (require 'owi-projectile)
 (require 'owi-helm)
+(require 'owi-yasnippet)
+(require 'owi-company)
 (require 'owi-flycheck)
 (require 'owi-haskell)
 (require 'owi-lisp)
