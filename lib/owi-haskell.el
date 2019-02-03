@@ -1,5 +1,6 @@
 (require 'owi-package-management)
 (require 'owi-flycheck)
+(require 'owi-projectile)
 
 (use-package haskell-mode
   :init
@@ -12,15 +13,22 @@
   (setq-default haskell-stylish-on-save t)
   (setq-default hindent-reformat-buffer-on-save nil)
 
+  :mode
+  ("\\.l?hs$" . haskell-mode)
+  
+
   :config
-  (add-to-list 'auto-mode-alist '("\\.l?hs$" . haskell-mode))
   (haskell-indentation-mode 1)
   (haskell-auto-insert-module-template)
   
   (add-hook 'haskell-mode-hook
     (lambda ()
-	(flycheck-mode)
-	(flycheck-haskell-setup)))
+      (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
+      (flycheck-mode)
+      (flycheck-haskell-setup)))
+
+  (define-key haskell-mode-map (kbd "C-c c") 'haskell-compile)
+
   (use-package hindent
     :init
     (setq-default hindent-process-path "brittany")
