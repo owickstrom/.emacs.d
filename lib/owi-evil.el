@@ -11,8 +11,6 @@
   (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile-find-file)
 
   (evil-set-initial-state 'term-mode 'emacs)
-  (evil-set-initial-state 'interactive-haskell-mode 'emacs)
-  (evil-set-initial-state 'haskell-error-mode 'emacs)
   )
 
 (provide 'owi-evil)

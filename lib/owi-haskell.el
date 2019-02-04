@@ -1,6 +1,7 @@
 (require 'owi-package-management)
 (require 'owi-flycheck)
 (require 'owi-projectile)
+(require 'owi-evil)
 
 (use-package haskell-mode
   :init
@@ -36,5 +37,8 @@
     (setq-default hindent-reformat-buffer-on-save nil)
     :config
     (add-hook 'haskell-mode-hook (hindent-mode 1))))
+
+(evil-set-initial-state 'interactive-haskell-mode 'emacs)
+(evil-set-initial-state 'haskell-error-mode 'emacs)
 
 (provide 'owi-haskell)
