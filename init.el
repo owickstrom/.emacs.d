@@ -2,6 +2,7 @@
 
 (require 'owi-package-management)
 (require 'owi-basics)
+(require 'owi-macos)
 (require 'owi-theming)
 (require 'owi-editing)
 (require 'owi-ido)
