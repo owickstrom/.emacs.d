@@ -8,6 +8,7 @@
   (smartparens-global-mode 1))
 
 (use-package undo-tree
+  :ensure t
   :config
   (global-undo-tree-mode))
 

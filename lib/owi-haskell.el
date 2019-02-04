@@ -30,6 +30,7 @@
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-compile)
 
   (use-package hindent
+    :ensure t
     :init
     (setq-default hindent-process-path "brittany")
     (setq-default hindent-reformat-buffer-on-save nil)
