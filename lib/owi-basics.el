@@ -15,4 +15,9 @@
 (setq visible-bell nil)
 (setq ring-bell-function (lambda nil (message "")))
 
+;; Disable macOS make-frame binding
+(global-unset-key (kbd "s-n"))
+
+(blink-cursor-mode 0)
+
 (provide 'owi-basics)
