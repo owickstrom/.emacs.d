@@ -11,6 +11,7 @@
 (require 'owi-helm)
 (require 'owi-yasnippet)
 (require 'owi-company)
+(require 'owi-direnv)
 (require 'owi-flycheck)
 (require 'owi-haskell)
 (require 'owi-lisp)
