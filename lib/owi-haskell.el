@@ -17,28 +17,34 @@
 
   :mode
   ("\\.l?hs$" . haskell-mode)
-  
+
+  :bind
+  (:map haskell-mode-map
+	("C-c c" . haskell-compile)
+	("C-c t m" . haskell-tasty-run-tests-in-module)
+	("C-c t t" . haskell-tasty-run-test-at-point))
 
   :config
   (haskell-indentation-mode 1)
-  (haskell-auto-insert-module-template)
+  (paredit-mode 1)
   
   (add-hook 'haskell-mode-hook
-    (lambda ()
-      (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
-      (flycheck-mode)
-      (flycheck-haskell-setup)))
-
-  (define-key haskell-mode-map (kbd "C-c c") 'haskell-compile)
-
-  (define-key haskell-mode-map (kbd "C-c t m") 'haskell-tasty-run-tests-in-module)
-  (define-key haskell-mode-map (kbd "C-c t t") 'haskell-tasty-run-test-at-point)
+	    (lambda ()
+	      (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
+	      (haskell-auto-insert-module-template)
+	      (flycheck-mode)
+	      (flycheck-haskell-setup)))
 
   (use-package hindent
     :ensure t
     :init
     (setq-default hindent-process-path "brittany")
     (setq-default hindent-reformat-buffer-on-save nil)
+
+    :bind
+    (:map hindent-mode-map
+	  ("M-q" . hindent-reformat-decl))
+
     :config
     (add-hook 'haskell-mode-hook (hindent-mode 1))))
 
