@@ -2,6 +2,7 @@
 (require 'owi-flycheck)
 (require 'owi-projectile)
 (require 'owi-evil)
+(require 'owi-tasty-run)
 
 (use-package haskell-mode
   :init
@@ -29,6 +30,9 @@
       (flycheck-haskell-setup)))
 
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-compile)
+
+  (define-key haskell-mode-map (kbd "C-c t m") 'haskell-tasty-run-tests-in-module)
+  (define-key haskell-mode-map (kbd "C-c t t") 'haskell-tasty-run-test-at-point)
 
   (use-package hindent
     :ensure t
