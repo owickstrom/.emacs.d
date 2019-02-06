@@ -40,4 +40,4 @@
 					  (format "tasty-discover-test-pattern fast-tags %s"
 						  module-file-name))))))
 
-(provide 'tasty-run)
+(provide 'owi-tasty-run)
