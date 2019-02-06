@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/lib")
 
-(require 'owi-package-management)
 (require 'owi-basics)
+(require 'owi-package-management)
 (require 'owi-macos)
 (require 'owi-theming)
 (require 'owi-editing)
