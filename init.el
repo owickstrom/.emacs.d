@@ -16,4 +16,5 @@
 (require 'owi-flycheck)
 (require 'owi-haskell)
 (require 'owi-lisp)
+(require 'owi-markdown)
 (require 'owi-org)
