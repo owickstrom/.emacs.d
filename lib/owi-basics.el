@@ -20,4 +20,7 @@
 
 (blink-cursor-mode 0)
 
+;; Use a plain window instead of a new frame for the ediff controls.
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (provide 'owi-basics)
