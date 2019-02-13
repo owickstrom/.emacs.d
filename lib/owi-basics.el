@@ -23,4 +23,9 @@
 ;; Use a plain window instead of a new frame for the ediff controls.
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+;; Text scaling
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
+
 (provide 'owi-basics)
