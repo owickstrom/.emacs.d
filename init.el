@@ -5,6 +5,7 @@
 (require 'owi-macos)
 (require 'owi-theming)
 (require 'owi-editing)
+(require 'owi-compile)
 (require 'owi-ido)
 (require 'owi-evil)
 (require 'owi-git)
