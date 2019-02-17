@@ -26,14 +26,15 @@
 
   :config
   (haskell-indentation-mode 1)
-  (paredit-mode 1)
   
   (add-hook 'haskell-mode-hook
 	    (lambda ()
 	      (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
 	      (haskell-auto-insert-module-template)
 	      (flycheck-mode)
-	      (flycheck-haskell-setup)))
+	      (flycheck-haskell-setup)
+        (paredit-mode 1)
+        (hindent-mode 1)))
 
   (use-package hindent
     :ensure t
@@ -43,10 +44,7 @@
 
     :bind
     (:map hindent-mode-map
-	  ("M-q" . hindent-reformat-decl))
-
-    :config
-    (add-hook 'haskell-mode-hook (hindent-mode 1))))
+	  ("M-q" . hindent-reformat-decl))))
 
 (evil-set-initial-state 'interactive-haskell-mode 'emacs)
 (evil-set-initial-state 'haskell-error-mode 'emacs)
