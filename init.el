@@ -19,3 +19,4 @@
 (require 'owi-lisp)
 (require 'owi-markdown)
 (require 'owi-org)
+(require 'owi-rust)
