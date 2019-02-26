@@ -25,6 +25,9 @@
 (setq visible-bell nil)
 (setq ring-bell-function (lambda nil (message "")))
 
+;; Use case-sensitive search by default
+(setq-default case-fold-search nil)
+
 ;; Disable macOS make-frame binding
 (global-unset-key (kbd "s-n"))
 
