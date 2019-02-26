@@ -14,6 +14,10 @@
 (add-hook 'makefile-mode-hook
           (lambda ()
             (setq-local indent-tabs-mode t)))
+
+;; Disable creation of .#<file> lockfiles
+(setq create-lockfiles nil)
+
 ;; Don't show weird fringe characters for empty lines.
 (setq-default indicate-empty-lines nil)
 
