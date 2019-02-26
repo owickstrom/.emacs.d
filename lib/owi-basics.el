@@ -8,6 +8,12 @@
 
 (setq inhibit-startup-screen t)
 
+;; Use spaces for indent
+(setq-default indent-tabs-mode nil)
+;; But not for Makefiles
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (setq-local indent-tabs-mode t)))
 ;; Don't show weird fringe characters for empty lines.
 (setq-default indicate-empty-lines nil)
 
