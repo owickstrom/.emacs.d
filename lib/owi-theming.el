@@ -14,4 +14,7 @@
   :config
   (load-theme 'atom-one-dark))
 
+(use-package minimal-theme
+  :ensure t)
+
 (provide 'owi-theming)
