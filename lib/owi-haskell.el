@@ -33,8 +33,8 @@
 	      (haskell-auto-insert-module-template)
 	      (flycheck-mode)
 	      (flycheck-haskell-setup)
-        (paredit-mode 1)
-        (hindent-mode 1)))
+	      (paredit-mode)
+	      (hindent-mode)))
 
   (use-package hindent
     :ensure t
@@ -44,7 +44,7 @@
 
     :bind
     (:map hindent-mode-map
-	  ("M-q" . hindent-reformat-decl))))
+	  ("M-q" . hindent-reformat-decl-or-fill))))
 
 (evil-set-initial-state 'interactive-haskell-mode 'emacs)
 (evil-set-initial-state 'haskell-error-mode 'emacs)
