@@ -9,10 +9,18 @@
 (when window-system
   (set-frame-font "Iosevka 13"))
 
-(use-package atom-one-dark-theme
+;; Use another font for variable pitch (like in eww)
+(custom-set-faces
+ '(variable-pitch ((t (:family "Linux Biolinum O" :height 160))))
+ )
+
+(use-package solarized-theme
   :ensure t
   :config
-  (load-theme 'atom-one-dark))
+  (load-theme 'solarized-dark))
+
+(use-package atom-one-dark-theme
+  :ensure t)
 
 (use-package minimal-theme
   :ensure t)
