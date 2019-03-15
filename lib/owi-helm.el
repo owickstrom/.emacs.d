@@ -12,6 +12,7 @@
     ("C-c g" . helm-git-grep)
     ("C-x C-f" . 'helm-find-files)
     ("C-x f" . 'helm-recentf)
+    ("C-c h e" . 'helm-etags-select)
     ("M-x" . helm-M-x))
 
   (use-package helm-projectile
