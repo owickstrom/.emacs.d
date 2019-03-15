@@ -21,6 +21,7 @@
   :bind
   (:map haskell-mode-map
 	("C-c c" . haskell-compile)
+	("C-c C-c" . haskell-compile)
 	("C-c t m" . haskell-tasty-run-tests-in-module)
 	("C-c t t" . haskell-tasty-run-test-at-point))
 
@@ -48,5 +49,12 @@
 
 (evil-set-initial-state 'interactive-haskell-mode 'emacs)
 (evil-set-initial-state 'haskell-error-mode 'emacs)
+
+(defun stack2cabal ()
+  "Prepare a stack project for use with cabal."
+  (interactive)
+  (when-let
+      (default-directory (locate-dominating-file default-directory "stack.yaml"))
+    (call-process "stack2cabal")))
 
 (provide 'owi-haskell)
