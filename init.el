@@ -16,6 +16,7 @@
 (require 'owi-direnv)
 (require 'owi-flycheck)
 (require 'owi-haskell)
+(require 'owi-purescript)
 (require 'owi-lisp)
 (require 'owi-markdown)
 (require 'owi-org)
