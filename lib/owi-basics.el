@@ -45,4 +45,7 @@
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 
+;; allow remembering risky variables
+(defun risky-local-variable-p (sym &optional _ignored) nil)
+
 (provide 'owi-basics)
