@@ -21,3 +21,4 @@
 (require 'owi-markdown)
 (require 'owi-org)
 (require 'owi-rust)
+(require 'owi-fstar)

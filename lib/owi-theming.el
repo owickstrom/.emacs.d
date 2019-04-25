@@ -17,12 +17,13 @@
 (use-package solarized-theme
   :ensure t
   :config
-  (load-theme 'solarized-dark))
+  (load-theme 'solarized-dark)
+  )
 
-(use-package atom-one-dark-theme
-  :ensure t)
-
-(use-package minimal-theme
-  :ensure t)
+;; (use-package atom-one-dark-theme
+;;   :ensure t)
+;; 
+;; (use-package minimal-theme
+;;   :ensure t)
 
 (provide 'owi-theming)
