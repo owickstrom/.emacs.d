@@ -48,4 +48,7 @@
 ;; allow remembering risky variables
 (defun risky-local-variable-p (sym &optional _ignored) nil)
 
+;; Require confirmation before exiting Emacs
+(setq confirm-kill-emacs #'yes-or-no-p)
+
 (provide 'owi-basics)
