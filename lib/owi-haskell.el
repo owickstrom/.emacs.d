@@ -22,8 +22,10 @@
   (:map haskell-mode-map
 	("C-c c" . haskell-compile)
 	("C-c C-c" . haskell-compile)
-	("C-c t m" . haskell-tasty-run-tests-in-module)
-	("C-c t t" . haskell-tasty-run-test-at-point))
+	("C-c t"   . haskell-mode-show-type-at)
+	("C-c g d" . haskell-mode-goto-loc)
+	("C-c C-z" . haskell-interactive-switch)
+	("C-c C-l" . haskell-process-load-or-reload))
 
   :config
   (haskell-indentation-mode 1)
