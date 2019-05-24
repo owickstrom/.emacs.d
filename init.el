@@ -11,7 +11,6 @@
 (require 'owi-git)
 (require 'owi-rg)
 (require 'owi-projectile)
-;; (require 'owi-helm)
 (require 'owi-yasnippet)
 (require 'owi-company)
 (require 'owi-direnv)
