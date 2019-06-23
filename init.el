@@ -23,3 +23,4 @@
 (require 'owi-rust)
 (require 'owi-fstar)
 (require 'owi-python)
+(require 'owi-nix)
