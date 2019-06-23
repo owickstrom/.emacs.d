@@ -14,11 +14,11 @@
  '(variable-pitch ((t (:family "Linux Biolinum O" :height 160))))
  )
 
-(use-package solarized-theme
-  :ensure t
-  :config
-  (load-theme 'solarized-dark)
-  )
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'solarized-dark)
+;;   )
 
 ;; (use-package atom-one-dark-theme
 ;;   :ensure t)
