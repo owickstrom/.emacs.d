@@ -34,6 +34,7 @@
 	          (lambda ()
 	            (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
 	            (haskell-auto-insert-module-template)
+              (add-to-list 'flycheck-disabled-checkers 'haskell-stack-ghc)
 	            (flycheck-mode)
 	            (flycheck-haskell-setup)
 	            (paredit-mode)
