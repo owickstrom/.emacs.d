@@ -12,7 +12,7 @@
 
 (defun my-projectile-test-suffix (project-type)
   (cond
-   ((member project-type '(haskell-cabal haskell-stack)) "Test")
+   ((member project-type '(haskell-cabal haskell-stack nix generic)) "Test")
    (t (projectile-test-suffix project-type))))
 
 (provide 'owi-projectile)
