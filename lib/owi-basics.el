@@ -52,3 +52,6 @@
 (setq confirm-kill-emacs #'yes-or-no-p)
 
 (provide 'owi-basics)
+
+(setq package-check-signature nil)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")

@@ -24,3 +24,4 @@
 (require 'owi-fstar)
 (require 'owi-python)
 (require 'owi-nix)
+(require 'owi-gradle)

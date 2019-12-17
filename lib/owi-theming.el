@@ -5,9 +5,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(add-to-list 'default-frame-alist '(font . "Iosevka-13"))
+(add-to-list 'default-frame-alist '(font . "Iosevka SS09-13"))
 (when window-system
-  (set-frame-font "Iosevka 13"))
+  (set-frame-font "Iosevka SS09 13"))
 
 ;; Use another font for variable pitch (like in eww)
 (custom-set-faces
