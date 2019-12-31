@@ -35,12 +35,12 @@
 	            (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
 	            (haskell-auto-insert-module-template)
               (add-to-list 'flycheck-disabled-checkers 'haskell-stack-ghc)
-	            (flycheck-mode)
-	            (flycheck-haskell-setup)
+	            ; (flycheck-mode)
+	            ; (flycheck-haskell-setup)
 	            (paredit-mode)
 	            (hindent-mode)
-              (add-to-list 'haskell-compilation-error-regexp-alist
-                           '("✗ .*? failed at \\(.*?\\):\\([0-9]+\\):\\([0-9]+\\)" 1 2 3 2 nil))
+              ;; (add-to-list 'haskell-compilation-error-regexp-alist
+              ;;              '("✗ .*? failed at \\(.*?\\):\\([0-9]+\\):\\([0-9]+\\)" 1 2 3 2 nil))
               ))
 
   (use-package hindent
