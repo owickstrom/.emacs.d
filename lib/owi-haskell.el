@@ -4,10 +4,15 @@
 (require 'owi-evil)
 (require 'owi-tasty-run)
 
+(use-package flycheck-haskell
+  :ensure t
+  :config
+  (add-to-list 'flycheck-disabled-checkers 'haskell-stack-ghc))
+
 (use-package haskell-mode
   :init
-  (setq-default haskell-compile-cabal-build-command "cabal v2-build all")
-  (setq-default haskell-compile-cabal-build-alt-command "TASTY_pattern=\"\" cabal v2-test all")
+  (setq-default haskell-compile-cabal-build-command "cabal build all")
+  (setq-default haskell-compile-cabal-build-alt-command "TASTY_pattern=\"\" cabal test all")
   (setq-default haskell-process-type 'ghci)
   (setq-default haskell-process-log t)
   (setq-default haskell-process-args-ghci '("-ferror-spans" "-fshow-loaded-modules"))
@@ -34,9 +39,7 @@
 	          (lambda ()
 	            (setq projectile-tags-command "fast-tags -Re --exclude=.stack-work --exclude=dist-newstyle .")
 	            (haskell-auto-insert-module-template)
-              (add-to-list 'flycheck-disabled-checkers 'haskell-stack-ghc)
-	            ; (flycheck-mode)
-	            ; (flycheck-haskell-setup)
+              (flycheck-mode)
 	            (paredit-mode)
 	            (hindent-mode)
               ;; (add-to-list 'haskell-compilation-error-regexp-alist
