@@ -25,3 +25,5 @@
 (require 'owi-python)
 (require 'owi-nix)
 ; (require 'owi-gradle)
+(require 'owi-emmet)
+(require 'owi-typescript)
