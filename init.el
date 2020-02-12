@@ -25,3 +25,4 @@
 (require 'owi-python)
 (require 'owi-nix)
 ; (require 'owi-gradle)
+(require 'owi-typescript)
