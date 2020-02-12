@@ -1,5 +1,6 @@
 (require 'owi-package-management)
 (require 'owi-company)
+(require 'owi-flycheck)
 
 (defun setup-tide-mode ()
   (interactive)
