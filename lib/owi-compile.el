@@ -1,3 +1,13 @@
+(require 'ansi-color)
+
+;; Enable ANSI color codes in compilation buffers
+;; (https://stackoverflow.com/a/13408008)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region compilation-filter-start (point))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+
 (global-set-key (kbd "<f5>") 'recompile)
 
 ;; from enberg on #emacs
