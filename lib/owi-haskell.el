@@ -49,7 +49,7 @@
   (use-package hindent
     :ensure t
     :init
-    (setq-default hindent-process-path "brittany")
+    (setq-default hindent-process-path "ormolu")
     (setq-default hindent-reformat-buffer-on-save nil)
 
     :bind
