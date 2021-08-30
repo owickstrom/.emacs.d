@@ -13,4 +13,7 @@
 (eval-when-compile
   (require 'use-package))
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (provide 'owi-package-management)

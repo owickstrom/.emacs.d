@@ -21,14 +21,12 @@
   )
 
 (use-package typescript-mode
-  :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode)))
 
 (use-package tide
   :after typescript-mode
-  :ensure t
   :config
 
   ;; formats the buffer before saving

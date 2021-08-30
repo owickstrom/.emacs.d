@@ -3,7 +3,6 @@
 (require 'compile)
 
 (use-package kotlin-mode
-  :ensure t
   :bind
   (:map kotlin-mode-map
         (("C-c C-c". my/gradlew-build)

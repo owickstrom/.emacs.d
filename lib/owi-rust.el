@@ -7,7 +7,6 @@
   )
 
 (use-package rust-mode
-  :ensure t
 
   :mode ("\\.rs\\'" . rust-mode)
 
@@ -16,9 +15,5 @@
   (use-package cargo :ensure t)
   (add-hook 'rust-mode-hook #'my-rust-mode-hook)
   (add-hook 'rust-mode-hook 'cargo-minor-mode))
-
-(use-package company-lsp
-  :config
-  (push 'company-lsp company-backends))
 
 (provide 'owi-rust)

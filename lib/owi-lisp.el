@@ -1,7 +1,6 @@
 (require 'owi-package-management)
 
 (use-package paredit
-  :ensure t
   :config
   ;; Auto load paredit in LISP buffers
   (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)

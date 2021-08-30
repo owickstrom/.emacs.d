@@ -1,7 +1,6 @@
 (require 'owi-package-management)
 
 (use-package company
-  :ensure t
   :init
   (setq company-dabbrev-downcase nil)
   (setq company-minimum-prefix-length 2)

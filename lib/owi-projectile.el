@@ -1,7 +1,6 @@
 (require 'owi-package-management)
 
 (use-package projectile
-  :ensure t
   :config
   (projectile-mode +1)
   (add-hook 'kotlin-mode-hook

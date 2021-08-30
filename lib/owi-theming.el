@@ -5,9 +5,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(add-to-list 'default-frame-alist '(font . "Iosevka SS09-18"))
+(add-to-list 'default-frame-alist '(font . "Iosevka-15"))
 (when window-system
-  (set-frame-font "Iosevka SS09 18"))
+  (set-frame-font "Iosevka 15"))
 
 ;; Use another font for variable pitch (like in eww)
 (custom-set-faces
@@ -17,21 +17,19 @@
 ;; (use-package atom-one-dark-theme
 ;;   :ensure t)
 ;; 
-;; (use-package minimal-theme
-;;   :ensure t)
+(use-package minimal-theme
+  :ensure t)
 
 (use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-nord-light)
-  )
+  :ensure t)
 
-(use-package solaire-mode
+(use-package theme-changer
   :after doom-themes
-  :ensure t
   :config
-  (solaire-global-mode +1)
-  (solaire-mode-swap-bg)
+  (setq calendar-location-name "Simrishamn, Sweden") 
+  (setq calendar-latitude 55.55653)
+  (setq calendar-longitude 14.35037)
+  (change-theme 'minimal-light 'minimal-black)
   )
 
 (provide 'owi-theming)

@@ -6,7 +6,6 @@
   :ensure t)
 
 (use-package merlin
-  :ensure t
   :config
   (add-hook 'tuareg-mode-hook 'merlin-mode)
   (add-hook 'merlin-mode-hook #'company-mode)
@@ -15,7 +14,6 @@
   (add-hook 'merlin-mode-hook 'flycheck-mode))
 
 (use-package flycheck-ocaml
-  :ensure t
   :after merlin
   :config
   (flycheck-ocaml-setup))

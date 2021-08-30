@@ -18,7 +18,6 @@
 (setq org-src-fontify-natively t)
 
 (use-package mixed-pitch
-  :ensure t
   :hook (org-mode . mixed-pitch-mode))
 
 (setq org-preview-latex-default-process 'dvisvgm)

@@ -4,7 +4,6 @@
   :ensure t)
 
 (use-package purescript-mode
-  :ensure t
 
   :init
   (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
