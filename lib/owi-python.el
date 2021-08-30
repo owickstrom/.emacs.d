@@ -6,15 +6,12 @@
   (python-mode . poetry-tracking-mode)
   )
 
-
-(use-package lsp-python-ms
+(use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
-                         (require 'lsp-python-ms)
-                         (lsp)))
-  ;; :init
-  ;; (setq lsp-python-ms-executable (executable-find "python-language-server"))
-  )
+                         (require 'lsp-pyright)
+                         (setq lsp-enabled-clients '(pyright))
+                         (lsp))))  ; or lsp-deferred
 
 (use-package poetry
   :config

@@ -29,3 +29,6 @@ ido.last
 /server
 /transient
 /elpy
+
+.cache
+.lsp-session-*
