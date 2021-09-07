@@ -24,7 +24,7 @@
   :ensure t)
 
 (use-package theme-changer
-  :after doom-themes
+  :after minimal-theme
   :config
   (setq calendar-location-name "Simrishamn, Sweden") 
   (setq calendar-latitude 55.55653)

@@ -32,3 +32,6 @@ ido.last
 
 .cache
 .lsp-session-*
+
+/eln-cache
+/request
