@@ -6,10 +6,10 @@
   :init
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
   (setq evil-want-keybinding nil)
-  (evil-set-undo-system 'undo-tree)
 
   :config ;; tweak evil after loading it
   (evil-mode)
+  (evil-set-undo-system 'undo-tree)
 
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-normal-state-map (kbd "C-c C-u") 'universal-argument)
