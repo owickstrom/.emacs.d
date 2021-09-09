@@ -14,22 +14,37 @@
  '(variable-pitch ((t (:family "Linux Biolinum O" :height 160))))
  )
 
-;; (use-package atom-one-dark-theme
-;;   :ensure t)
-;; 
 (use-package minimal-theme
   :ensure t)
 
 (use-package doom-themes
   :ensure t)
 
-(use-package theme-changer
-  :after minimal-theme
-  :config
-  (setq calendar-location-name "Simrishamn, Sweden") 
-  (setq calendar-latitude 55.55653)
-  (setq calendar-longitude 14.35037)
-  (change-theme 'minimal-light 'minimal-black)
-  )
+(defvar light-theme 'doom-gruvbox-light)
+(defvar dark-theme 'doom-gruvbox)
+
+(defun my/apply-theme (appearance)
+  "Load theme, taking current system APPEARANCE into consideration."
+  (mapc #'disable-theme custom-enabled-themes)
+  (pcase appearance
+    ('light (load-theme light-theme t))
+    ('dark (load-theme dark-theme t))))
+
+(if (boundp 'ns-system-appearance)
+    ;; if we're on emacs-plus, we can used the patched-in hook for system
+    ;; appearance to control light/dark themes
+    (progn
+      (add-hook 'ns-system-appearance-change-functions #'my/apply-theme))
+
+  ;; otherwise, we use this package to do it based on sunlight
+  (use-package theme-changer
+    :after minimal-theme
+    :config
+    (setq calendar-location-name "Simrishamn, Sweden") 
+    (setq calendar-latitude 55.55653)
+    (setq calendar-longitude 14.35037)
+    (change-theme light-theme dark-theme)))
+
+
 
 (provide 'owi-theming)
