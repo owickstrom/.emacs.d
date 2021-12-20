@@ -7,7 +7,7 @@
 
 (add-to-list 'default-frame-alist '(font . "Iosevka-15"))
 (when window-system
-  (set-frame-font "Iosevka 15"))
+  (set-frame-font "Iosevka 13"))
 
 ;; Use another font for variable pitch (like in eww)
 (custom-set-faces
