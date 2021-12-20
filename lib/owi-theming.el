@@ -20,8 +20,8 @@
 (use-package doom-themes
   :ensure t)
 
-(defvar light-theme 'doom-gruvbox-light)
-(defvar dark-theme 'doom-gruvbox)
+(defvar light-theme 'doom-one-light)
+(defvar dark-theme 'doom-one)
 
 (defun my/apply-theme (appearance)
   "Load theme, taking current system APPEARANCE into consideration."

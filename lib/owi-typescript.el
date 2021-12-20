@@ -9,6 +9,7 @@
   ;; add emmet (zen coding)
   (emmet-mode)
   (setq emmet-expand-jsx-className? t)
+  (prettier-mode)
   )
 
 (use-package typescript-mode
