@@ -14,12 +14,12 @@
   :ensure t
   :hook (python-mode . (lambda ()
                          (require 'lsp-pyright)
-                         (setq lsp-enabled-clients '(pyright))
+                         (setq-local lsp-enabled-clients '(pyright))
                          (lsp))))  ; or lsp-deferred
 
-(use-package poetry
-  :config
-  (poetry-tracking-mode)
- )
+;; (use-package poetry
+;;   :config
+;;   (poetry-tracking-mode)
+;;  )
 
 (provide 'owi-python)
