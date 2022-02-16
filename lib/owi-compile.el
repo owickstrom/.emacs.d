@@ -1,5 +1,7 @@
 (require 'ansi-color)
 
+(setq compilation-scroll-output t)
+
 ;; Enable ANSI color codes in compilation buffers
 ;; (https://stackoverflow.com/a/13408008)
 (defun colorize-compilation-buffer ()
