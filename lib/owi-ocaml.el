@@ -18,5 +18,7 @@
   :config
   (flycheck-ocaml-setup))
 
+(use-package merlin-company
+  :after merlin)
 
 (provide 'owi-ocaml)

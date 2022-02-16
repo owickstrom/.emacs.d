@@ -6,6 +6,10 @@
   (python-mode . poetry-tracking-mode)
   )
 
+(use-package py-yapf
+  :ensure t
+  :hook (python-mode . py-yapf-enable-on-save))
+
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
