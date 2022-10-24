@@ -16,6 +16,7 @@
   (define-key evil-normal-state-map (kbd "C-c C--") 'negative-argument)
   (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
   (define-key evil-normal-state-map (kbd "C-S-p") 'projectile-find-file-other-window)
+  (define-key evil-normal-state-map (kbd "C-/") 'comment-line)
   (define-key evil-normal-state-map (kbd "TAB") 'org-cycle)
 
   (evil-set-initial-state 'term-mode 'emacs)
