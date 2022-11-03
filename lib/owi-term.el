@@ -5,6 +5,7 @@
   )
 
 (use-package vterm-toggle
+  :ensure t
   :config
   (evil-global-set-key 'normal [f2] 'vterm-toggle)
   (evil-global-set-key 'normal [C-f2] 'vterm-toggle-cd)

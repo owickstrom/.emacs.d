@@ -7,7 +7,7 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode)
   (add-to-list 'company-backends '(company-dabbrev))
-  (global-set-key (kbd "C-SPC") 'company-complete-common)
+  (global-set-key (kbd "C-SPC") 'company-capf)
   )
 
 (provide 'owi-company)
