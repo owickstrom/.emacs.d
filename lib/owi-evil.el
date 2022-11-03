@@ -18,6 +18,11 @@
   (define-key evil-normal-state-map (kbd "C-S-p") 'projectile-find-file-other-window)
   (define-key evil-normal-state-map (kbd "TAB") 'org-cycle)
 
+  ;; Override the default undo binding
+  (define-key evil-normal-state-map (kbd "C-/") 'comment-line)
+  ;; ... which weirdly requires fiddling with undo-tree-mode to not go into automatically disabled mode.
+  (with-eval-after-load 'undo-tree (defun undo-tree-overridden-undo-bindings-p () nil))
+
   (evil-set-initial-state 'term-mode 'emacs)
   )
 
