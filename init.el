@@ -31,6 +31,6 @@
 (require 'owi-web)
 (require 'owi-typescript)
 (require 'owi-ocaml)
-(require 'owi-elixir)
+;; (require 'owi-elixir)
 (require 'owi-specstrom)
 (require 'owi-plantuml)
