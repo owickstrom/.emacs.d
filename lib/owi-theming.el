@@ -30,7 +30,7 @@
   nil)
 
 (defvar light-theme 'doom-tomorrow-day)
-(defvar dark-theme 'doom-tomorrow-night)
+(defvar dark-theme 'doom-challenger-deep)
 
 (defun my/apply-theme (appearance)
   "Load theme, taking current system APPEARANCE into consideration."
