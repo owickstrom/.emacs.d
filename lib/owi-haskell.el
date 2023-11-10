@@ -53,7 +53,7 @@
 (use-package lsp-mode
   :bind
   (("C-S-i" . lsp-format-buffer)
-   ("C-c f" . lsp-ui-sideline-apply-code-actions)))
+   ("C-c f" . lsp-execute-code-action)))
 
 (use-package lsp-ui
   :bind

@@ -33,4 +33,3 @@
 (require 'owi-ocaml)
 ;; (require 'owi-elixir)
 (require 'owi-specstrom)
-(require 'owi-plantuml)
