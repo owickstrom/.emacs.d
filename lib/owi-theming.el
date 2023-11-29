@@ -6,10 +6,10 @@
 (scroll-bar-mode -1)
 
 (add-to-list 'default-frame-alist '(undecorated . t))
-(add-to-list 'default-frame-alist '(alpha . (95 . 92)))
+(add-to-list 'default-frame-alist '(alpha . (99 . 92)))
 
 (set-frame-parameter (selected-frame) 'undecorated 't)
-(set-frame-parameter (selected-frame) 'alpha '(95 . 92))
+(set-frame-parameter (selected-frame) 'alpha '(99 . 92))
 
 
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-13"))
