@@ -14,7 +14,6 @@
 (require 'owi-helm)
 (require 'owi-yasnippet)
 (require 'owi-company)
-(require 'owi-direnv)
 ;;(require 'owi-term)
 (require 'owi-flycheck)
 (require 'owi-haskell)
@@ -33,4 +32,6 @@
 (require 'owi-ocaml)
 (require 'owi-elixir)
 (require 'owi-specstrom)
-(require 'owi-plantuml)
+
+;; Should go last to get the paths right.
+(require 'owi-direnv)

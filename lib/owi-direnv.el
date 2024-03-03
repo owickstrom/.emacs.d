@@ -1,8 +1,8 @@
 (require 'owi-package-management)
 (require 'owi-macos)
 
-(use-package direnv
+(use-package envrc
   :config
-  (direnv-mode))
+  (envrc-global-mode))
 
 (provide 'owi-direnv)
