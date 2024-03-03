@@ -10,6 +10,7 @@
   :config ;; tweak evil after loading it
   (evil-mode)
   (evil-set-undo-system 'undo-tree)
+  (global-unset-key (kbd "<f11>"))
 
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-normal-state-map (kbd "C-c C-u") 'universal-argument)

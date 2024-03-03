@@ -13,6 +13,7 @@
   ("C-c p" . projectile-command-map)
   :init
   (setq projectile-test-suffix-function 'my-projectile-test-suffix)
+  (setq projectile-tags-command "git ls-files | ctags -e -L-")
   )
 
 (defun my-projectile-test-suffix (project-type)

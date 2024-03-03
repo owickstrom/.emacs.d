@@ -16,6 +16,9 @@
   :config
   (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
-  (add-hook 'typescript-mode-hook #'setup-typescript))
+  (add-hook 'typescript-mode-hook #'setup-typescript)
+
+  :bind
+  (("C-S-i" . prettier-prettify)))
 
 (provide 'owi-typescript)

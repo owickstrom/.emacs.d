@@ -30,7 +30,7 @@
 (require 'owi-web)
 (require 'owi-typescript)
 (require 'owi-ocaml)
-(require 'owi-elixir)
+;; (require 'owi-elixir)
 (require 'owi-specstrom)
 
 ;; Should go last to get the paths right.

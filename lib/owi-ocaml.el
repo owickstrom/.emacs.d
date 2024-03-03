@@ -3,22 +3,22 @@
 (require 'owi-flycheck)
 
 (use-package tuareg
-  :ensure t)
-
-(use-package merlin
+  :ensure t
   :config
-  (add-hook 'tuareg-mode-hook 'merlin-mode)
-  (add-hook 'merlin-mode-hook #'company-mode)
-  (setq merlin-error-after-save nil)
-  (add-hook 'merlin-mode-hook (lambda () (flycheck-ocaml-setup)))
-  (add-hook 'merlin-mode-hook 'flycheck-mode))
 
-(use-package flycheck-ocaml
-  :after merlin
+  (add-hook 'tuareg-mode-hook
+            (lambda ()
+              (lsp))))
+
+(use-package ocamlformat
+  :after tuareg)
+
+(use-package dune
+  :after tuareg)
+
+(use-package utop
+  :after tuareg
   :config
-  (flycheck-ocaml-setup))
-
-(use-package merlin-company
-  :after merlin)
+  (setq utop-command "opam config exec -- dune utop . -- -emacs"))
 
 (provide 'owi-ocaml)
